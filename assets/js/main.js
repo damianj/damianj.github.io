@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
     $("#rss-feeds").rss(
     
         //Change this to your own rss feeds
-        "https://damianjimenez.wordpress.com/feed/",
+        "http://damianjimenez.tumblr.com/rss",
         
         {
         // how many entries do you want?
