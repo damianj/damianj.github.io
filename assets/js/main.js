@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     /*======= Skillset *=======*/
     
     $('.level-bar-inner').css('width', '0');
-    
+	
     $(window).on('load', function() {
 
         $('.level-bar-inner').each(function() {
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
     $("#rss-feeds").rss(
     
         //Change this to your own rss feeds
-        "http://feeds.feedburner.com/TechCrunch/startups",
+        "https://damianjimenez.wordpress.com/feed/",
         
         {
         // how many entries do you want?
@@ -53,7 +53,8 @@ jQuery(document).ready(function($) {
     );
     
     /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
-    GitHubActivity.feed({ username: "caseyscarborough", selector: "#ghfeed" });
-
+    GitHubActivity.feed({ username: "damianj", selector: "#ghfeed" });
 
 });
+
+function mailto_email(){window.location.href = "znvygb:wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});};
