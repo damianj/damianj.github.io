@@ -48,10 +48,11 @@ jQuery(document).ready(function($) {
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
-                var data = {'name': name, 'email': email, 'message': message}
+                var data = {form_name: name, form_email: email, form_message: message};
                 var posting = $.post("php/contact.php", data);
                 posting.done(function(d) {
-                    alert(d)
+                    console.log(d);
+                    alert(d);
                 });
                 $('#contactform').delay(50).fadeOut(500)
                 $('html, body').css({

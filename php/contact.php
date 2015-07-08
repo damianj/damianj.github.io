@@ -1,9 +1,9 @@
 <?php
 $emailTo = 'jimenez.dmn@gmail.com';
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name    = stripslashes(trim($_POST['name']));
-    $email   = stripslashes(trim($_POST['email']));
-    $message = stripslashes(trim($_POST['message']));
+    $name    = stripslashes(trim($_POST['form_name']));
+    $email   = stripslashes(trim($_POST['form_email']));
+    $message = stripslashes(trim($_POST['form_message']));
     $pattern  = '/[\r\n]|Content-Type:|Bcc:|Cc:/i';
     if (preg_match($pattern, $name) || preg_match($pattern, $email)) {
         die("Header injection detected");
