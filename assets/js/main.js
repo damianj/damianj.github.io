@@ -1,5 +1,12 @@
+function mailto_email() {
+    window.location.href = "znvygb:wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {
+        return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+    });
+};
+
 jQuery(document).ready(function($) {
-    document.getElementById('contact').action = 'http://formspree.io/jimenez.dmn@gmail.com'
+    email = "znvygb:wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
+    document.getElementById('contact').action = 'http://formspree.io/' + email
     /*======= Skillset *=======*/
     $('.level-bar-inner').css('width', '0');
     $(window).on('load', function() {
@@ -85,10 +92,3 @@ jQuery(document).ready(function($) {
         };
     });
 });
-
-
-function mailto_email() {
-    window.location.href = "znvygb:wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {
-        return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-    });
-};
