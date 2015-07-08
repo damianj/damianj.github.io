@@ -6,7 +6,7 @@ function mailto_email() {
 
 jQuery(document).ready(function($) {
     email = "wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
-    document.getElementById('contact').action = 'http://formspree.io/' + email
+    document.getElementById('contact').action = 'http://formspree.io/' + email;
     /*======= Skillset *=======*/
     $('.level-bar-inner').css('width', '0');
     $(window).on('load', function() {
