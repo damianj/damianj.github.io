@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
@@ -40,8 +41,6 @@
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
 </head> 
-
-<body>
     <!-- ******HEADER****** --> 
     <header class="header">
         <div class="container">                       
@@ -55,10 +54,35 @@
                     <li><a href="https://github.com/damianj" target="_blank" style="text-decoration: none;">git</a></li>                          
                 </ul> 
             </div><!--//profile-->
-            <a class="btn btn-cta-primary pull-right" href="#" onclick="mailto_email()" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>              
+            <a id="popup-contact" class="btn btn-cta-primary pull-right" href="#"><i class="fa fa-paper-plane"></i> Contact Me</a>              
         </div><!--//container-->
     </header><!--//header-->
     
+<body>
+<section id="contactform" class="contactform">
+    <form class="form" action="#" id="contact">
+            <div class="field name-box">
+                <input type="text" id="name" placeholder="Who Are You?"/>
+                <label for="name">Name</label>
+                <span class="ss-icon">check</span>
+            </div>
+
+            <div class="field email-box">
+                <input type="text" id="email" placeholder="name@email.com"/>
+                <label for="email">Email</label>
+                <span class="ss-icon">check</span>
+            </div>
+
+            <div class="field msg-box">
+                <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+                <label for="msg">Msg</label>
+                <span class="ss-icon">check</span>
+            </div>
+
+            <input class="button" type="submit" id="send" value="Send" />
+            <input class="button" type="button" id="cancel" value="Cancel"/>
+    </form>
+</section>
     <div class="container sections-wrapper">
         <div class="row">
             <div class="primary col-md-8 col-sm-12 col-xs-12">
@@ -67,9 +91,7 @@
                         <h2 class="heading">About Me</h2>
                         <div class="content">
                             <p>I'm currently a student at the University of Texas at Arlington. I am working towards my Bachelors in Computer Science and possibly a Masters or PhD down the road. I graduated UT Austin with a biology degree, but my experiences during my last semester led me to make the leap into this field. I did some undergraduate research at UT Austin, which really helped me hone in on what I was passionate about. I love technology and Computer Science as a field. There are so many possibilities today afforded to us by technology, and I know there's much more waiting to be accomplished.</p>    
-         
-        <p>My main interests are algorithms, assistive technology, machine learning, and VR. I also like keeping track of "Big Data" projects and initiatives that make use of the plethora of data out there available to the public. There's a lot to learn from data we already have, and computing is one of the ways I think we can improve the quality of life of people; by empowering, teaching, and giving people the tools with which to meaningfully interpret the world around them. I am always looking for new opportunities to be part of a project, or just learn and take in the insight of others.</p>
-                         
+                            <p>My main interests are algorithms, assistive technology, machine learning, and VR. I also like keeping track of "Big Data" projects and initiatives that make use of the plethora of data out there available to the public. There's a lot to learn from data we already have, and computing is one of the ways I think we can improve the quality of life of people; by empowering, teaching, and giving people the tools with which to meaningfully interpret the world around them. I am always looking for new opportunities to be part of a project, or just learn and take in the insight of others.</p>
                         </div><!--//content-->
                     </div><!--//section-inner-->                 
                 </section><!--//section-->
@@ -197,7 +219,7 @@
                                 <li><i class="fa fa-headphones"></i> <a href="https://play.google.com/music/m/B34hwzjy42pz4oa57h2mtrbsq24?t=In_Return_-_ODESZA" target="_blank">ODESZA - In Return</a></li>
                                 <li><i class="fa fa-headphones"></i> <a href="https://play.google.com/music/m/B5jmco4hfa2eswy4wdorlvcxzem?t=Vintage_Caf_-_Lounge__Jazz_Blends_-_Various_Artists" target="_blank">Vintage Cafe - Lounge Jazz & Blends</a></li>
                                 <li><i class="fa fa-headphones"></i> <a href="https://play.google.com/music/m/Bmljt2boyx4dgupqm3cxscmvwly?t=Black_Sands_-_Bonobo" target="_blank">Bonobo - Black Sands</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://play.google.com/music/m/T6tczvklpaykc26mgjhbdrjkypa?t=All_I_Need_Nebbra_Remix_-_Lemaitre" target="_blank">Lemaitre - All I Need</a></li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://play.google.com/music/m/T6tczvklpaykc26mgjhbdrjkypa?t=All_I_Need_Nebbra_Remix_-_Lemaitre" target="_blank">Lemaitre - Singularity (Remixed)</a></li>
                             </ul>
                         </div><!--//content-->
                     </div><!--//section-inner-->
