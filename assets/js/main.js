@@ -75,6 +75,7 @@ jQuery(document).ready(function($) {
         }
     });
     $("#popup-contact").click(function() {
+        $('#contactform').find('form')[0].reset();
         $('#contactform').delay(50).fadeIn(500);
         $('html, body').css({
             'overflow': 'hidden',
