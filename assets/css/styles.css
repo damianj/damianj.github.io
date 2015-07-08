@@ -49,6 +49,7 @@ a.btn {
   font-family: 'Montserrat', arial, sans-serif;
   padding: 8px 16px;
   font-weight: bold;
+  box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.20);
 }
 .btn .fa,
 a.btn .fa {
@@ -255,6 +256,7 @@ iframe {
   padding: 30px 0;
   background: #313A3D;
   border-top: 10px solid #6d95a0;
+  box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.30);
 }
 .header .btn {
   margin-top: 60px;
@@ -262,10 +264,15 @@ iframe {
 }
 .header .profile-image {
   margin-right: 30px;
+  -webkit-filter: drop-shadow(0.5px 0.5px 5px rgba(0,0,0,0.15));
+  filter: url(#drop-shadow);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0.5, OffY=0.5, Color='33000000')";
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0.5, OffY=0.5, Color='33000000')";
 }
 .header .profile-content .name {
   color: #eeeeee;
   font-size: 38px;
+  text-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.30);
   margin-bottom: 5px;
   margin-top: 30px;
 }
@@ -275,26 +282,39 @@ iframe {
   font-weight: 400;
   font-size: 24px;
   margin-top: 0;
+  text-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.30);
   margin-bottom: 15px;
 }
 .header .profile-content .social a {
   background: #b0b7bf;
   width: 36px;
   height: 36px;
+  font-size: 1.2em;
+  font-weight: bold;
   display: inline-block;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
+  border: 2px solid white;
+  padding-top: 1px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   color: #fff;
   text-align: center;
+  box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.30);
 }
 .header .profile-content .social a:hover {
-  background: #778492;
+  color: #FD9638;
+  border: #FD9638 2px dotted;
+  background: #fff;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
 }
 .header .profile-content .social a .fa {
   font-size: 20px;
@@ -310,6 +330,7 @@ iframe {
 }
 .section .section-inner {
   background: #fff;
+  box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.075);
   padding: 30px;
 }
 .section .heading {

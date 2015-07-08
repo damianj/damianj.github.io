@@ -48,11 +48,12 @@ jQuery(document).ready(function($) {
         selector: "#ghfeed"
     });
     /* Contact form */
-    $("#send").click(function() {
+    $("#send").click(function(e) {
         var name = $("#name").val();
         var email = $("#email").val();
         var message = $("#msg").val();
         if (name == "" || email == "" || message == "") {
+            e.preventDefault();
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
@@ -62,6 +63,7 @@ jQuery(document).ready(function($) {
                     'height': 'auto'
                 });
             } else {
+                e.preventDefault();
                 alert('Invalid Email Address');
             }
             function validateEmail(email) {
