@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
-                $('#contactform').find('form')[0].reset();
+                $('#contactform').delay(1000).find('form')[0].reset();
                 $('#contactform').delay(50).fadeOut(500);
                 $('html, body').css({
                     'overflow': 'auto',
@@ -78,6 +78,7 @@ jQuery(document).ready(function($) {
     $("#contact #cancel, #contactform").click(function(e) {
         if(!$( event.target).is('form, input, label, div, span, textarea, text') || $( event.target).is('#cancel')) {
             $('#contactform').delay(50).fadeOut(500);
+            $('#contactform').find('form')[0].reset();
             $('html, body').css({
                 'overflow': 'auto',
                 'height': 'auto'
