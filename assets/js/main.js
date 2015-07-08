@@ -48,6 +48,11 @@ jQuery(document).ready(function($) {
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
+                var data = {name: name, email: email, message: message}
+                var posting = $.post("php/contact.php", data);
+                posting.done(function(d) {
+                    alert(d)
+                });
                 $('#contactform').delay(50).fadeOut(500)
                 $('html, body').css({
                     'overflow': 'auto',
@@ -59,14 +64,6 @@ jQuery(document).ready(function($) {
             function validateEmail(email) {
                 var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
                 if (filter.test(email)) {
-                    var data = {name: name, email: email, message: message}
-                    var posting = $.post("php/contact.php", data, function(json) {
-                        console.log(json.name);
-                        console.log(json.time);
-                    }, "json");
-                    posting.done(function( data ) {
-                        alert(data)
-                    });
                     return true;
                 } else {
                     return false;
