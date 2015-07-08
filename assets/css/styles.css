@@ -99,8 +99,7 @@ a.btn-cta-secondary:hover,
 }
 form {
   width: 58.33333%;
-  margin: auto;
-  vertical-align: middle;
+  margin: auto auto auto 20.8333333%;
 }
 form .field {
   width: 100%;
@@ -202,12 +201,13 @@ form input[type="submit"], input[type="button"] {
   border: none;
   text-transform: uppercase;
   position: relative;
-  padding: 10px 40px;
+  left: .25%;
+  padding: 10px 0px;
   font-size: 1.4em;
   letter-spacing: 0.1em;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  width: 49.8%;
+  width: 49.5%;
   -webkit-transition: all 333ms ease-in-out;
   -moz-transition: all 333ms ease-in-out;
   -o-transition: all 333ms ease-in-out;
