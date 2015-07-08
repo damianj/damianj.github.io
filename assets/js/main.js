@@ -49,7 +49,6 @@ jQuery(document).ready(function($) {
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
-                $('#contactform').delay(1000).find('form')[0].reset();
                 $('#contactform').delay(50).fadeOut(500);
                 $('html, body').css({
                     'overflow': 'auto',
