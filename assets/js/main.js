@@ -54,6 +54,7 @@ jQuery(document).ready(function($) {
                     console.log(d);
                     alert(d);
                 });
+                $('#contactform').find('form')[0].reset();
                 $('#contactform').delay(50).fadeOut(500)
                 $('html, body').css({
                     'overflow': 'auto',
