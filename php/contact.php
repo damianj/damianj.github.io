@@ -1,5 +1,5 @@
 <?php
-$emailTo = str_rot13('wvzrarm.qza@tznvy.pbz');
+$emailTo = 'jimenez.dmn@gmail.com';
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name    = stripslashes(trim($_POST['name']));
     $email   = stripslashes(trim($_POST['email']));

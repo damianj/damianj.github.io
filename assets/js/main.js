@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
-                var data = {name: name, email: email, message: message}
+                var data = {'name': name, 'email': email, 'message': message}
                 var posting = $.post("php/contact.php", data);
                 posting.done(function(d) {
                     alert(d)
