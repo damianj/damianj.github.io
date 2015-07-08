@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+    document.getElementById('contact').action = 'http://formspree.io/jimenez.dmn@gmail.com'
     /*======= Skillset *=======*/
     $('.level-bar-inner').css('width', '0');
     $(window).on('load', function() {
@@ -48,12 +49,6 @@ jQuery(document).ready(function($) {
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
-                var data = {form_name: name, form_email: email, form_message: message};
-                var posting = $.post("php/contact.php", data);
-                posting.done(function(d) {
-                    console.log(d);
-                    alert(d);
-                });
                 $('#contactform').find('form')[0].reset();
                 $('#contactform').delay(50).fadeOut(500);
                 $('html, body').css({
