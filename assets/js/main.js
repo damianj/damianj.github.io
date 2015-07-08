@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
                     alert(d);
                 });
                 $('#contactform').find('form')[0].reset();
-                $('#contactform').delay(50).fadeOut(500)
+                $('#contactform').delay(50).fadeOut(500);
                 $('html, body').css({
                     'overflow': 'auto',
                     'height': 'auto'
@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
         }
     });
     $("#popup-contact").click(function() {
-        $('#contactform').delay(50).fadeIn(500)
+        $('#contactform').delay(50).fadeIn(500);
         $('html, body').css({
             'overflow': 'hidden',
             'height': '100%'
@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
     });
     $("#contact #cancel, #contactform").click(function(e) {
         if(!$( event.target).is('form, input, label, div, span, textarea, text') || $( event.target).is('#cancel')) {
-            $('#contactform').delay(50).fadeOut(500)
+            $('#contactform').delay(50).fadeOut(500);
             $('html, body').css({
                 'overflow': 'auto',
                 'height': 'auto'
