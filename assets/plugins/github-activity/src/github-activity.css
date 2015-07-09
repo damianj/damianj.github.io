@@ -58,13 +58,14 @@ span.gha-time {
 }
 
 .gha-feed a {
-  color: #4183c4;
+  color: #6d95a0;
   text-decoration: none;
   font-weight: bold;
 }
 
 .gha-feed a:hover {
-  text-decoration: underline;
+  color: #313A3D;
+  text-decoration: none;
 }
 
 .gha-feed pre {

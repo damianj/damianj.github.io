@@ -203,12 +203,12 @@ form .field input[type="text"]:focus + label, form .field input[type="text"].foc
 form .field textarea:focus + label,
 form .field textarea.focused + label {
   width: 18%;
-  background: #FD9638;
+  background: #54ba4e;
   color: #313A3D;
 }
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
-  color: #FD9638;
+  color: #54ba4e;
 }
 form .field:hover label {
   width: 18%;
@@ -216,7 +216,7 @@ form .field:hover label {
   color: white;
 }
 form input[type="submit"], input[type="button"] {
-  background: #FD9638;
+  background: #54ba4e;
   color: white;
   -webkit-appearance: none;
   border: none;
@@ -237,11 +237,12 @@ form input[type="submit"], input[type="button"] {
 }
 form input[type="submit"]:hover, input[type="button"]:hover {
   background: #313A3D;
-  color: #FD9638;
+  color: #54ba4e;
 }
 form input[type="submit"]:focus, input[type="button"]:focus {
   outline: none;
-  background: #cd6302;
+  background: #49ac43;
+  color: white;
 }
 .text-highlight {
   color: #32383e;
@@ -327,8 +328,8 @@ iframe {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .header .profile-content .social a:hover {
-  color: #FD9638;
-  border: #FD9638 2px dotted;
+  color: #54ba4e;
+  border: #54ba4e 2px dotted;
   background: #fff;
   -webkit-transition: all 333ms ease-in-out;
   -moz-transition: all 333ms ease-in-out;
@@ -553,7 +554,8 @@ iframe {
 }
 .skills .skillset .level-bar-inner {
   height: 15px;
-  background: #FD9638;
+  background: #54ba4e;
+  box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.15);
 }
 /* Testimonials section */
 .testimonials .item {
