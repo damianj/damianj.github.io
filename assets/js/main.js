@@ -106,8 +106,6 @@ jQuery(document).ready(function($) {
         railoffset: {left: 13},
         scrollspeed: 90,
         mousescrollstep: 70,
-        hwacceleration: true,
-        bouncescroll: true,
     });
 });
 
