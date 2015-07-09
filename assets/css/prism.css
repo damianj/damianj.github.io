@@ -1,13 +1,14 @@
-/* http://prismjs.com/download.html?themes=prism-dark&languages=markup+css+clike+javascript+actionscript+bash+c+cpp+coffeescript+css-extras+http+ini+java+latex+makefile+markdown+php+php-extras+powershell+python+r+ruby+scala+scheme+sql+swift+wiki+yaml&plugins=line-highlight+line-numbers+autolinker+file-highlight+show-language+highlight-keywords */
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+actionscript+apacheconf+applescript+aspnet+autohotkey+bash+brainfuck+c+csharp+cpp+coffeescript+css-extras+dart+eiffel+erlang+fsharp+fortran+gherkin+git+go+groovy+haml+handlebars+haskell+http+ini+jade+java+julia+keyman+latex+less+lolcode+makefile+markdown+matlab+nasm+nsis+objectivec+pascal+perl+php+php-extras+powershell+python+r+jsx+rest+rip+ruby+rust+sas+scss+scala+scheme+smalltalk+smarty+sql+stylus+swift+twig+typescript+vhdl+wiki+yaml&plugins=line-highlight+line-numbers+autolinker+wpd+file-highlight+show-language+highlight-keywords */
 /**
- * prism.js Dark theme for JavaScript, CSS and HTML
- * Based on the slides of the talk “/Reg(exp){2}lained/”
- * @author Lea Verou
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
  */
+
 code[class*="language-"],
 pre[class*="language-"] {
-	color: white;
-	text-shadow: 0 -.1em .2em black;
+	color: #f8f8f2;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 	direction: ltr;
 	text-align: left;
@@ -26,45 +27,34 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-@media print {
-	code[class*="language-"],
-	pre[class*="language-"] {
-		text-shadow: none;
-	}
-}
-
-pre[class*="language-"],
-:not(pre) > code[class*="language-"] {
-	background: hsl(30, 20%, 25%);
-}
-
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
-	border: .3em solid hsl(30, 20%, 40%);
-	border-radius: .5em;
-	box-shadow: 1px 1px .5em black inset;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .15em .2em .05em;
+	padding: .1em;
 	border-radius: .3em;
-	border: .13em solid hsl(30, 20%, 40%);
-	box-shadow: 1px 1px .3em -.1em black inset;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: hsl(30, 20%, 50%);
+	color: slategray;
 }
 
 .token.punctuation {
-	opacity: .7;
+	color: #f8f8f2;
 }
 
 .namespace {
@@ -73,11 +63,15 @@ pre[class*="language-"] {
 
 .token.property,
 .token.tag,
-.token.boolean,
-.token.number,
 .token.constant,
-.token.symbol {
-	color: hsl(350, 40%, 70%);
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
 }
 
 .token.selector,
@@ -86,7 +80,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: hsl(75, 70%, 60%);
+	color: #a6e22e;
 }
 
 .token.operator,
@@ -95,18 +89,22 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: hsl(40, 90%, 60%);
+	color: #f8f8f2;
 }
 
 .token.atrule,
 .token.attr-value,
+.token.function {
+	color: #e6db74;
+}
+
 .token.keyword {
-	color: hsl(350, 40%, 70%);
+	color: #66d9ef;
 }
 
 .token.regex,
 .token.important {
-	color: #e90;
+	color: #fd971f;
 }
 
 .token.important,
@@ -119,10 +117,6 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
-}
-
-.token.deleted {
-	color: red;
 }
 
 pre[data-line] {
@@ -214,6 +208,17 @@ pre.line-numbers > code {
 		}
 .token a {
 	color: inherit;
+}
+code[class*="language-"] a[href],
+pre[class*="language-"] a[href] {
+	cursor: help;
+	text-decoration: none;
+}
+
+code[class*="language-"] a[href]:hover,
+pre[class*="language-"] a[href]:hover {
+	cursor: help;
+	text-decoration: underline;
 }
 pre[class*='language-'] {
 	position: relative;
