@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
     /* jQuery RSS - https://github.com/sdepold/jquery-rss */
     $("#rss-feeds").rss(
         //Change this to your own rss feeds
-        "http://damianjimenez.tumblr.com/rss", {
+        "http://jimenezdmn.tumblr.com/rss", {
             // how many entries do you want?
             // default: 4
             // valid values: any integer
