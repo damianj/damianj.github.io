@@ -116,7 +116,7 @@ a.btn-cta-secondary:hover,
   width: 100%;
   padding-top: 12.5%;
   display: none;
-  z-index: 99;
+  z-index: 100;
 }
 form {
   width: 58.33333%;
@@ -498,6 +498,7 @@ iframe {
 /* Git section */
 .ghfeed {
   height: 600px;
+  padding: 0 0 0 5px;
 }
 .ghfeed,
 .ghfeed *,

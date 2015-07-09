@@ -7,6 +7,18 @@ function mailto_email() {
 jQuery(document).ready(function($) {
     email = "wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
     document.getElementById('contact').action = 'http://formspree.io/' + email;
+    $(".gha-feed").niceScroll({
+        cursorcolor:"#6d95a0",
+        cursoropacitymin: 0.5,
+        cursoropacitymax: 1,
+        cursorwidth: "8px",
+        cursorborderradius: "0px",
+        railoffset: {left: 13},
+        scrollspeed: 90,
+        mousescrollstep: 70,
+        hwacceleration: true,
+        bouncescroll: true,
+    });
     /*======= Skillset *=======*/
     $('.level-bar-inner').css('width', '0');
     $(window).on('load', function() {
@@ -62,6 +74,7 @@ jQuery(document).ready(function($) {
                     'overflow': 'auto',
                     'height': 'auto'
                 });
+                $(".gha-feed").getNiceScroll().resize();
             } else {
                 e.preventDefault();
                 alert('Invalid Email Address');
@@ -83,6 +96,7 @@ jQuery(document).ready(function($) {
             'overflow': 'hidden',
             'height': '100%'
         });
+        $(".gha-feed").getNiceScroll().resize();
     });
     $("#contact #cancel, #contactform").click(function(e) {
         if(!$( event.target).is('form, input, label, div, span, textarea, text') || $( event.target).is('#cancel')) {
@@ -92,6 +106,11 @@ jQuery(document).ready(function($) {
                 'overflow': 'auto',
                 'height': 'auto'
             });
+            $(".gha-feed").getNiceScroll().resize();
         };
     });
+});
+
+$( window ).resize(function() {
+  $(".gha-feed").getNiceScroll().resize();
 });
