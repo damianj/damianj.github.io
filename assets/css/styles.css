@@ -31,13 +31,13 @@ h2 {
 	border-bottom: 1px dotted #6d95a0;
 }
 
-@-webkit-keyframes shake {
-  0% { -webkit-transform: rotateZ(3deg); }
-  20% { -webkit-transform: rotateZ(-3deg); }
-  40% { -webkit-transform: rotateZ(3deg); }
-  60% { -webkit-transform: rotateZ(-3deg); }
-  80% { -webkit-transform: rotateZ(3deg); }
-  100% { -webkit-transform: rotateZ(0deg); }
+@keyframes shake {
+  0% { transform: rotateZ(3deg); }
+  20% { transform: rotateZ(-3deg); }
+  40% { transform: rotateZ(3deg); }
+  60% { transform: rotateZ(-3deg); }
+  80% { transform: rotateZ(3deg); }
+  100% { transform: rotateZ(0deg); }
 }
 
 a {
@@ -80,17 +80,17 @@ a.btn-cta-primary,
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
   background: #49ac43;
   border: 1px solid #49ac43;
-  -webkit-animation-name: shake;
-  -webkit-animation-duration: 375ms;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation-name: shake;
+  animation-duration: 375ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   color: #fff;
 }
 a.btn-cta-secondary,

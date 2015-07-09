@@ -4,11 +4,13 @@ html, body {
   margin: 0;
   padding: 0;
 }
-@-webkit-keyframes glow {
+
+@keyframes glow {
   0% { background-color: #fff; }
   50% { background-color: #f4f4f4; }
   100% { background-color: #fff; }
 }
+
 .gha-feed {
   width: 100%;
   height: 100%;
@@ -20,6 +22,7 @@ html, body {
   overflow-y: auto;
   border: 2px solid white;
 }
+
 .gha-feed, .gha-feed h2, .gha-feed h3, .gha-feed p, .gha-feed ul, .gha-feed li {
   margin: 0;
   padding: 0;
@@ -144,11 +147,11 @@ span.gha-time {
 }
 
 .gha-activity:hover {
-  -webkit-animation-name: glow;
-  -webkit-animation-duration: 800ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
+  animation-name: glow;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
 .gha-activity.gha-small {
