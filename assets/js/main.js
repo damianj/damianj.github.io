@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
             entryTemplate: '<h3 class="title"><a href="{url}" target="_blank">{title}</a></h3><div><p>{shortBodyPlain}</p><a class="more-link" href="{url}" target="_blank"><i class="fa fa-external-link"></i>Read more</a></div>'
         }
     );
-    /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
+    /* Github Activity Feed */
     GitHubActivity.feed({
         username: "damianj",
         selector: "#ghfeed"
