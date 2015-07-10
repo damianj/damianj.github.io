@@ -72,22 +72,22 @@ a.btn:focus {
 }
 a.btn-cta-primary,
 .btn-cta-primary {
-  background: #54ba4e;
-  border: 1px solid #54ba4e;
+  background: #6D95A0;
+  border: 1px solid #6D95A0;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
-  background: #49ac43;
-  border: 1px solid #49ac43;
+  background: #AED8BB;
+  border: 1px solid #AED8BB;
   animation-name: shake;
   animation-duration: 375ms;
   animation-iteration-count: 1;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  color: #fff;
+  color: #49ac43;
 }
 a.btn-cta-secondary,
 .btn-cta-secondary {
@@ -117,6 +117,10 @@ a.btn-cta-secondary:hover,
 form {
   width: 58.33333%;
   margin: auto auto auto 20.8333333%;
+}
+.contactbtns {
+	width: 100%;
+	display: table;
 }
 form .field {
   width: 100%;
@@ -199,12 +203,12 @@ form .field input[type="text"]:focus + label, form .field input[type="text"].foc
 form .field textarea:focus + label,
 form .field textarea.focused + label {
   width: 18%;
-  background: #54ba4e;
+  background: #AED8BB;
   color: #313A3D;
 }
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
-  color: #54ba4e;
+  color: #AED8BB;
 }
 form .field:hover label {
   width: 18%;
@@ -212,19 +216,18 @@ form .field:hover label {
   color: white;
 }
 form input[type="submit"], input[type="button"] {
-  background: #54ba4e;
+  background: #AED8BB;
   color: white;
+  border: 1px solid #313A3D;
   -webkit-appearance: none;
-  border: none;
   text-transform: uppercase;
   position: relative;
-  left: .25%;
   padding: 10px 0px;
   font-size: 1.4em;
   letter-spacing: 0.1em;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  width: 49.5%;
+  width: 50%;
   -webkit-transition: all 333ms ease-in-out;
   -moz-transition: all 333ms ease-in-out;
   -o-transition: all 333ms ease-in-out;
@@ -233,7 +236,7 @@ form input[type="submit"], input[type="button"] {
 }
 form input[type="submit"]:hover, input[type="button"]:hover {
   background: #313A3D;
-  color: #54ba4e;
+  color: #AED8BB;
 }
 form input[type="submit"]:focus, input[type="button"]:focus {
   outline: none;
@@ -317,7 +320,7 @@ a.btn.shrink {
   color: #eeeeee;
   font-size: 38px;
   text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.30);
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   margin-top: 30px;
 }
 .header .profile-content .desc {
@@ -327,42 +330,36 @@ a.btn.shrink {
   font-size: 24px;
   margin-top: 0;
   text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.30);
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .header .profile-content .social a {
-  background: #fff;
+  background: rgba(255, 255, 255, 0);
+  margin-top: 5px;
   width: 46px;
   height: 46px;
-  font-size: 1.6em;
-  font-weight: bold;
   display: inline-block;
-  border: 2px dotted #6d95a0;
-  padding-top: 1px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   color: #6d95a0;
-  text-align: center;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-.header .profile-content .social a:hover {
-  color: #54ba4e;
-  border: #54ba4e 2px dotted;
-  background: #fff;
-  -webkit-transition: all 333ms ease-in-out;
-  -moz-transition: all 333ms ease-in-out;
-  -o-transition: all 333ms ease-in-out;
-  -ms-transition: all 333ms ease-in-out;
-  transition: all 333ms ease-in-out;
 }
 .header .profile-content .social a .fa {
-  font-size: 20px;
-  padding-top: 8px;
+  font-size: 37px;
+  color: #6d95a0;
+  margin: 0 0 0 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  text-align: center;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.header .profile-content .social a .fa:hover {
+  animation-name: shake;
+  animation-duration: 375ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  color: #AED8BB;
 }
 /* ======= Sections======= */
 .sections-wrapper {
