@@ -282,6 +282,7 @@ header {
   padding: 10px 0 10px 0;
   background: #313A3D;
   border-top: 10px solid #6d95a0;
+  border-bottom: 1px dotted #6d95a0;
   box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.30);
 }
 header.header.shrink {
