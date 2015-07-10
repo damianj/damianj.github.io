@@ -693,14 +693,15 @@ a.btn.shrink {
 }
 /* ======= Footer ======= */
 .footer {
-  background: #313A3D;
+  background: rgba(49, 58, 61, 0.95);
   color: #fff;
-  padding: 10px 0;
+  padding: 3px 0px;
+  border-top: 1px dotted #6d95a0;
 }
 .footer .copyright {
-  line-height: 1.6;
+  line-height: 2.6;
   color: #a1aab4;
-  font-size: 14px;
+  font-size: 9px;
 }
 .footer a {
   color: #fff;
