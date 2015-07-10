@@ -117,17 +117,17 @@ $(window).scroll(function() {
     if ($('html, body').scrollTop() > 0 || $(window).scrollTop() > 0 || $(document).scrollTop() > 0) {
         $('header').addClass('shrink');
         $('a.btn').addClass('shrink');
-        $('img.profile-image').stop(true, true).fadeOut(10);
-        $('h1.name').stop(true, true).fadeOut(10);
-        $('h2.desc').stop(true, true).fadeOut(10);
+        $('img.profile-image').addClass('shrink');
+        $('h1.name').stop(true, true).fadeOut(25);
+        $('h2.desc').stop(true, true).fadeOut(25);
         $('body').css( "padding-top", "175px" );
     }
     else {
         $('header').removeClass('shrink');
-        contactmove = setTimeout(function(){$('a.btn').removeClass('shrink');}, 75);
-        $('img.profile-image').stop(true, true).fadeIn(250)
-        $('h1.name').stop(true, true).fadeIn(250);
-        $('h2.desc').stop(true, true).fadeIn(250);
+        contactmove = setTimeout(function(){$('a.btn').removeClass('shrink');}, 70);
+        $('img.profile-image').removeClass('shrink');
+        $('h1.name').stop(true, true).fadeIn(300);
+        $('h2.desc').stop(true, true).fadeIn(300);
         $('body').css( "padding-top", "230px" );
     }
 });
