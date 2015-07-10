@@ -709,6 +709,7 @@ a.btn.shrink {
 @media (max-width: 767px) {
   .header {
     text-align: center;
+    height: 230px;
     min-height: 130px;
   }
   .header .profile-image {
