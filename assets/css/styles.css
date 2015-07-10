@@ -270,10 +270,10 @@ iframe {
 */
 /* ======= Header ======= */
 header {
-  -webkit-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  -moz-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  -ms-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  -o-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -moz-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -ms-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -o-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 .header {
   height: 230px;
@@ -295,12 +295,17 @@ h1.name.shrink {
 h2.desc.shrink {
   display: none;
 }
+a.btn {
+  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -moz-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -ms-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -o-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
 a.btn.shrink {
-  position: relative;
+  position:  relative;
   top: -70px;
 }
 .header .btn {
-  margin-top: 60px;
   font-weight: bold;
 }
 .header .profile-image {

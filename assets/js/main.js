@@ -114,20 +114,20 @@ $( window ).resize(function() {
 });
 
 $(window).scroll(function() {
-    if ($(document).scrollTop() > 0) {
+    if ($('html, body').scrollTop() > 0 || $(window).scrollTop() > 0 || $(document).scrollTop() > 0) {
         $('header').addClass('shrink');
-        contactup = setTimeout(function(){$('a.btn').addClass('shrink');}, 80);
-        $('img.profile-image').fadeOut(50)
-        $('h1.name').fadeOut(50);
-        $('h2.desc').fadeOut(50);
+        $('a.btn').addClass('shrink');
+        $('img.profile-image').stop(true, true).fadeOut(10);
+        $('h1.name').stop(true, true).fadeOut(10);
+        $('h2.desc').stop(true, true).fadeOut(10);
         $('body').css( "padding-top", "175px" );
     }
     else {
         $('header').removeClass('shrink');
-        contactdown = setTimeout(function(){$('a.btn').removeClass('shrink');}, 125);
-        $('img.profile-image').delay(125).fadeIn(250)
-        $('h1.name').delay(125).fadeIn(100);
-        $('h2.desc').delay(125).fadeIn(100);
+        contactmove = setTimeout(function(){$('a.btn').removeClass('shrink');}, 75);
+        $('img.profile-image').stop(true, true).fadeIn(250)
+        $('h1.name').stop(true, true).fadeIn(250);
+        $('h2.desc').stop(true, true).fadeIn(250);
         $('body').css( "padding-top", "230px" );
     }
 });
