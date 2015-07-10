@@ -118,9 +118,9 @@ form {
   width: 58.33333%;
   margin: auto auto auto 20.8333333%;
 }
-.contactbtns {
-	width: 100%;
-	display: table;
+table.contactbtns {
+  width: 100%;
+  border: none;
 }
 form .field {
   width: 100%;
@@ -218,8 +218,8 @@ form .field:hover label {
 form input[type="submit"], input[type="button"] {
   background: #AED8BB;
   color: white;
-  border: 1px solid #313A3D;
   -webkit-appearance: none;
+  border: 0px solid black;
   text-transform: uppercase;
   position: relative;
   padding: 10px 0px;
@@ -227,7 +227,7 @@ form input[type="submit"], input[type="button"] {
   letter-spacing: 0.1em;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  width: 50%;
+  width: 98.5%;
   -webkit-transition: all 333ms ease-in-out;
   -moz-transition: all 333ms ease-in-out;
   -o-transition: all 333ms ease-in-out;
