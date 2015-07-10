@@ -325,13 +325,13 @@ a.btn.shrink {
   margin-bottom: 5px;
 }
 .header .profile-content .social a {
-  background: #b0b7bf;
+  background: #fff;
   width: 46px;
   height: 46px;
   font-size: 1.6em;
   font-weight: bold;
   display: inline-block;
-  border: 2px solid white;
+  border: 2px dotted #6d95a0;
   padding-top: 1px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -341,7 +341,7 @@ a.btn.shrink {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  color: #fff;
+  color: #6d95a0;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -706,10 +706,13 @@ a.btn.shrink {
   color: #fb866a;
 }
 /* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 1100px) {
+   body {
+    padding-top: 510px;
+  }
   .header {
     text-align: center;
-    height: 230px;
+    height: 520px;
     min-height: 130px;
   }
   .header .profile-image {
@@ -721,11 +724,27 @@ a.btn.shrink {
     text-align: center;
   }
   .header .btn {
-    margin-top: 30px;
+    margin-top: 0px;
     float: none !important;
   }
   .project-image {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+   body {
+    padding-top: 540px;
+  }
+  .header {
+    height: 540px;
+  }
+}
+@media (max-width: 375px) {
+   body {
+    padding-top: 600px;
+  }
+  .header {
+    height: 600px;
   }
 }
 /* Small devices (tablets, 768px and up) */

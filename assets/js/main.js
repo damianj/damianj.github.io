@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
                 $('#contactform').delay(50).fadeOut(500);
                 $('html, body').css({
                     'overflow': 'auto',
-                    'height': 'auto'
+                    'height': 'auto',
                 });
                 $(".gha-feed").getNiceScroll().resize();
             } else {
@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
         $('#contactform').delay(50).fadeIn(500);
         $('html, body').css({
             'overflow': 'hidden',
-            'height': '100%'
+            'height': '100%',
         });
         $(".gha-feed").getNiceScroll().resize();
     });
@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
             $('#contactform').find('form')[0].reset();
             $('html, body').css({
                 'overflow': 'auto',
-                'height': 'auto'
+                'height': 'auto',
             });
             $(".gha-feed").getNiceScroll().resize();
         };
