@@ -110,5 +110,24 @@ jQuery(document).ready(function($) {
 });
 
 $( window ).resize(function() {
-  $(".gha-feed").getNiceScroll().resize();
+    $(".gha-feed").getNiceScroll().resize();
+});
+
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 0) {
+        $('header').addClass('shrink');
+        contactup = setTimeout(function(){$('a.btn').addClass('shrink');}, 80);
+        $('img.profile-image').fadeOut(50)
+        $('h1.name').fadeOut(50);
+        $('h2.desc').fadeOut(50);
+        $('body').css( "padding-top", "175px" );
+    }
+    else {
+        $('header').removeClass('shrink');
+        contactdown = setTimeout(function(){$('a.btn').removeClass('shrink');}, 125);
+        $('img.profile-image').delay(125).fadeIn(250)
+        $('h1.name').delay(125).fadeIn(100);
+        $('h2.desc').delay(125).fadeIn(100);
+        $('body').css( "padding-top", "230px" );
+    }
 });

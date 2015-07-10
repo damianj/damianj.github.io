@@ -12,6 +12,7 @@ body {
   color: #434343;
   background: #dedede url('http://s5.postimg.org/atuvjpcef/background.png') top left fixed repeat;
   font-size: 16px;
+  padding-top: 230px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -56,11 +57,7 @@ a:focus {
   text-decoration: none;
 }
 .btn,
-a.btn {  
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
+a.btn {
   font-family: 'Montserrat', arial, sans-serif;
   padding: 8px 16px;
   font-weight: bold;
@@ -80,7 +77,6 @@ a.btn-cta-primary,
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
@@ -116,7 +112,7 @@ a.btn-cta-secondary:hover,
   width: 100%;
   padding-top: 12.5%;
   display: none;
-  z-index: 100;
+  z-index: 9999999;
 }
 form {
   width: 58.33333%;
@@ -273,11 +269,35 @@ iframe {
 }
 */
 /* ======= Header ======= */
+header {
+  -webkit-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -moz-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -ms-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -o-transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
 .header {
-  padding: 30px 0;
+  height: 230px;
+  padding: 10px 0 10px 0;
   background: #313A3D;
   border-top: 10px solid #6d95a0;
   box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.30);
+}
+header.header.shrink {
+  height: 78px;
+  background-color: rgba(49, 58, 61, 0.95);
+}
+img.profile-image.shrink {
+  display: none;
+}
+h1.name.shrink {
+  display: none;
+}
+h2.desc.shrink {
+  display: none;
+}
+a.btn.shrink {
+  position: relative;
+  top: -70px;
 }
 .header .btn {
   margin-top: 60px;
@@ -286,9 +306,7 @@ iframe {
 .header .profile-image {
   margin-right: 30px;
   -webkit-filter: drop-shadow(0.5px 0.5px 3px rgba(0, 0, 0, 0.3));
-  filter: url(#drop-shadow);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0.5, OffY=0.5, Color='4D000000')";
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0.5, OffY=0.5, Color='4D000000')";
+  filter: drop-shadow(0.5px 0.5px 3px rgba(0, 0, 0, 0.3));
 }
 .header .profile-content .name {
   color: #eeeeee;
@@ -691,6 +709,7 @@ iframe {
 @media (max-width: 767px) {
   .header {
     text-align: center;
+    min-height: 130px;
   }
   .header .profile-image {
     float: none !important;

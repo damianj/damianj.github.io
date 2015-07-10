@@ -15,12 +15,12 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- github acitivity css -->
     <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/dist/octicons/octicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.4.1/octicons.min.css">
     
     
     <!-- Theme CSS -->  
@@ -31,35 +31,17 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
     <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
     <!-- github activity plugin -->
     <script type="text/javascript" src="assets/plugins/github-activity/dist/mustache/mustache.min.js"></script>
     <script type="text/javascript" src="assets/plugins/github-activity/dist/github-activity-0.1.1.min.js"></script>
     <!-- custom js -->
-    <script type="text/javascript" src="assets/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-</head> 
-    <!-- ******HEADER****** --> 
-    <header class="header">
-        <div class="container">                       
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Damian Jimenez" />
-            <div class="profile-content pull-left">
-                <h1 class="name">Damian Jimenez</h1>
-                <h2 class="desc" style="border: none">Computer Science Undergraduate at UT Arlington</h2>   
-                <ul class="social list-inline">                
-                    <li><a href="https://plus.google.com/110202671513953583175/posts" target="_blank" style="text-decoration: none;">g+</a></li>
-                    <li><a href="https://www.linkedin.com/in/damianjimenez" target="_blank" style="text-decoration: none;">in</a></li>
-                    <li><a href="https://github.com/damianj" target="_blank" style="text-decoration: none;">git</a></li>                          
-                </ul> 
-            </div><!--//profile-->
-            <a id="popup-contact" class="btn btn-cta-primary pull-right" href="#" style="box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.30);"><i class="fa fa-paper-plane"></i> Contact Me</a>              
-        </div><!--//container-->
-    </header><!--//header-->
-    
-<body>
+</head>
 <section id="contactform" class="contactform">
     <form class="form" action="#" id="contact" method="POST" target="_blank">
             <div class="field name-box">
@@ -84,7 +66,25 @@
             <input class="button" type="button" id="cancel" value="Cancel" />
     </form>
 </section>
-    <div class="container sections-wrapper">
+<!-- ******HEADER****** --> 
+<header class="header navbar-fixed-top">
+    <div class="container">                       
+        <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Damian Jimenez" />
+        <div class="profile-content pull-left">
+            <h1 class="name">Damian Jimenez</h1>
+            <h2 class="desc" style="border: none">Computer Science Undergraduate at UT Arlington</h2>   
+            <ul class="social list-inline">                
+                <li><a href="https://plus.google.com/110202671513953583175/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/damianjimenez" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/damianj" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://jimenezdmn.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>                          
+            </ul>
+        </div><!--//profile-->   
+        <a id="popup-contact" class="btn btn-cta-primary pull-right" href="#" style="box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.30); margin-top: 75px; "><i class="fa fa-paper-plane"></i> Contact Me</a>          
+    </div><!--//container-->
+</header><!--//header-->
+<body>
+    <div class="container sections-wrapper" style="display: block">
         <div class="row">
             <div class="primary col-md-8 col-sm-12 col-xs-12">
                 <section class="about section">
