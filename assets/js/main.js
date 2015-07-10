@@ -87,7 +87,7 @@ jQuery(document).ready(function($) {
         $(".gha-feed").getNiceScroll().resize();
     });
     $("#contact #cancel, #contactform").click(function(e) {
-        if(!$( event.target).is('form, input, label, div, span, textarea, text') || $( event.target).is('#cancel')) {
+        if(!$(e.target).is('form, input, label, div, span, textarea, text') || $(e.target).is('#cancel')) {
             $('#contactform').delay(50).fadeOut(500);
             $('#contactform').find('form')[0].reset();
             $('html, body').css({
