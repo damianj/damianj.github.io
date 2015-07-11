@@ -114,7 +114,7 @@ a.btn-cta-secondary:hover,
 }
 .contactform {
     background: rgba(0, 0, 0, 0.93);
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     height: 100%;

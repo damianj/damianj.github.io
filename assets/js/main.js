@@ -4,7 +4,35 @@ function mailto_email() {
     });
 };
 
+function Tracker() {
+    this.value = 0;
+};
+
+Tracker.prototype.next = function(e) {
+    if(e != null) {
+        this.value = e;
+        return;
+    }
+    return this.value;
+};
+
+function toogleBool() {
+    this.value = true;
+};
+
+toogleBool.prototype.next = function(e) {
+    if (e != null) {
+        this.value = e;
+        return;
+    }
+    return this.value;
+};
+
+var enableNav = new toogleBool();
 jQuery(document).ready(function($) {
+    var $noscroll = $(window);
+    $noscroll.disablescroll();
+    $noscroll.disablescroll('undo');
     email = "wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
     document.getElementById('contact').action = 'http://formspree.io/' + email;
     /*======= Skillset *=======*/
@@ -57,11 +85,9 @@ jQuery(document).ready(function($) {
             alert("Please Fill All Fields");
         } else {
             if (validateEmail(email)) {
-                $('#contactform').delay(50).fadeOut(500);
-                $('html, body').css({
-                    'overflow': 'auto',
-                    'height': 'auto',
-                });
+                $('.contactform').delay(50).fadeOut(500);
+                enableNav.next(true);
+                $noscroll.disablescroll("undo");
                 $(".gha-feed").getNiceScroll().resize();
             } else {
                 e.preventDefault();
@@ -78,22 +104,17 @@ jQuery(document).ready(function($) {
         }
     });
     $(".popup-contact").click(function() {
-        $('#contactform').find('form')[0].reset();
-        $('#contactform').delay(50).fadeIn(500);
-        $('html, body').css({
-            'overflow': 'hidden',
-            'height': '100%',
-        });
+        $('.contactform').find('form')[0].reset();
+        enableNav.next(false);
+        $noscroll.disablescroll('disable');
+        $('.contactform').delay(50).fadeIn(500);
         $(".gha-feed").getNiceScroll().resize();
     });
-    $("#contact #cancel, #contactform").click(function(e) {
+    $("#contact #cancel, .contactform").click(function(e) {
         if(!$(e.target).is('form, input, label, div, span, textarea, text') || $(e.target).is('#cancel')) {
-            $('#contactform').delay(50).fadeOut(500);
-            $('#contactform').find('form')[0].reset();
-            $('html, body').css({
-                'overflow': 'auto',
-                'height': 'auto',
-            });
+            $('.contactform').delay(50).fadeOut(500);
+            enableNav.next(true);
+            $noscroll.disablescroll("undo");
             $(".gha-feed").getNiceScroll().resize();
         };
     });
@@ -113,21 +134,9 @@ $( window ).resize(function() {
     $(".gha-feed").getNiceScroll().resize();
 });
 
-function Counter() {
-    this.value = 0;
-};
-
-Counter.prototype.next = function(e) {
-    if(e != null) {
-        this.value = e;
-        return;
-    }
-    return this.value;
-};
-
-tracker  = new Counter(); /* Use tracker to optimize scroll() event to execute only when truly necessary */
+var trackPageTop = new Tracker(); /* Use tracker to optimize scroll() event to execute only when truly necessary */
 $(window).scroll(function() {
-    if ($(document).scrollTop() > 0 && tracker.next(null) == 0) {
+    if ($(document).scrollTop() > 0 && trackPageTop.next(null) == 0 && enableNav.next(null)) {
         $('header').addClass('shrink');
         $('img.profile-image').addClass('shrink');
         $('a.popup-contact').stop(true, true).animate({
@@ -139,7 +148,7 @@ $(window).scroll(function() {
         }, 130);
         $('body').css( "padding-top", "175px" );
     }
-    else if ($(document).scrollTop() == 0 && tracker.next(null) > 0) {
+    else if ($(document).scrollTop() == 0 && trackPageTop.next(null) > 0 && enableNav.next(null)) {
         $('header').removeClass('shrink');
         $('img.profile-image').removeClass('shrink');
         $('a.popup-contact').stop(true, true).animate({
@@ -151,5 +160,5 @@ $(window).scroll(function() {
         }, 300);
         $('body').css( "padding-top", "230px" );
     }
-    tracker.next($(document).scrollTop());
+    trackPageTop.next($(document).scrollTop());
 });
