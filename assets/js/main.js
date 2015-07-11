@@ -77,7 +77,7 @@ jQuery(document).ready(function($) {
             }
         }
     });
-    $("#popup-contact").click(function() {
+    $(".popup-contact").click(function() {
         $('#contactform').find('form')[0].reset();
         $('#contactform').delay(50).fadeIn(500);
         $('html, body').css({
@@ -113,21 +113,43 @@ $( window ).resize(function() {
     $(".gha-feed").getNiceScroll().resize();
 });
 
+function Counter() {
+    this.value = 0;
+};
+
+Counter.prototype.next = function(e) {
+    if(e != null) {
+        this.value = e;
+        return;
+    }
+    return this.value;
+};
+
+tracker  = new Counter(); /* Use tracker to optimize scroll() event to execute only when truly necessary */
 $(window).scroll(function() {
-    if ($('html, body').scrollTop() > 0 || $(window).scrollTop() > 0 || $(document).scrollTop() > 0) {
+    if ($(document).scrollTop() > 0 && tracker.next(null) == 0) {
         $('header').addClass('shrink');
-        $('a.btn').addClass('shrink');
         $('img.profile-image').addClass('shrink');
-        $('h1.name').stop(true, true).fadeOut(25);
-        $('h2.desc').stop(true, true).fadeOut(25);
+        $('a.popup-contact').stop(true, true).animate({
+            marginTop: '5px',
+        }, 60);
+        $('h1.name, h2.desc').stop(true, true).animate({
+            marginTop: '-=57px',
+            opacity: '0',
+        }, 130);
         $('body').css( "padding-top", "175px" );
     }
-    else {
+    else if ($(document).scrollTop() == 0 && tracker.next(null) > 0) {
         $('header').removeClass('shrink');
-        contactmove = setTimeout(function(){$('a.btn').removeClass('shrink');}, 70);
         $('img.profile-image').removeClass('shrink');
-        $('h1.name').stop(true, true).fadeIn(300);
-        $('h2.desc').stop(true, true).fadeIn(300);
+        $('a.popup-contact').stop(true, true).animate({
+            marginTop: '75px',
+        }, 100);
+        $('h1.name, h2.desc').stop(true, true).animate({
+            marginTop: '+=57px',
+            opacity: '100',
+        }, 300);
         $('body').css( "padding-top", "230px" );
     }
+    tracker.next($(document).scrollTop());
 });
