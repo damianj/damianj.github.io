@@ -28,11 +28,7 @@ toogleBool.prototype.next = function(e) {
     return this.value;
 };
 
-var enableNav = new toogleBool();
 jQuery(document).ready(function($) {
-    var $noscroll = $(window);
-    $noscroll.disablescroll();
-    $noscroll.disablescroll('undo');
     email = "wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
     document.getElementById('contact').action = 'http://formspree.io/' + email;
     /*======= Skillset *=======*/
@@ -86,8 +82,6 @@ jQuery(document).ready(function($) {
         } else {
             if (validateEmail(email)) {
                 $('.contactform').delay(50).fadeOut(500);
-                enableNav.next(true);
-                $noscroll.disablescroll("undo");
                 $(".gha-feed").getNiceScroll().resize();
             } else {
                 e.preventDefault();
@@ -105,16 +99,12 @@ jQuery(document).ready(function($) {
     });
     $(".popup-contact").click(function() {
         $('.contactform').find('form')[0].reset();
-        enableNav.next(false);
-        $noscroll.disablescroll('disable');
         $('.contactform').delay(50).fadeIn(500);
         $(".gha-feed").getNiceScroll().resize();
     });
     $("#contact #cancel, .contactform").click(function(e) {
         if(!$(e.target).is('form, input, label, div, span, textarea, text') || $(e.target).is('#cancel')) {
             $('.contactform').delay(50).fadeOut(500);
-            enableNav.next(true);
-            $noscroll.disablescroll("undo");
             $(".gha-feed").getNiceScroll().resize();
         };
     });
@@ -165,7 +155,7 @@ $(window).resize(function() {
 
 var trackPageTop = new Tracker();
 $(window).scroll(function() {
-    if ($(document).scrollTop() > 0 && trackPageTop.next(null) == 0 && enableNav.next(null)) {
+    if ($(document).scrollTop() > 0 && trackPageTop.next(null) == 0) {
         $('header').addClass('shrink');
         $('img.profile-image').addClass('shrink');
         $('a.popup-contact').stop(true, true).animate({
@@ -177,7 +167,7 @@ $(window).scroll(function() {
         }, 130);
         $('body').css( "padding-top", "175px" );
     }
-    else if ($(document).scrollTop() == 0 && trackPageTop.next(null) > 0 && enableNav.next(null)) {
+    else if ($(document).scrollTop() == 0 && trackPageTop.next(null) > 0) {
         $('header').removeClass('shrink');
         $('img.profile-image').removeClass('shrink');
         if($(document).width() > targetwidth.next(null)) {
