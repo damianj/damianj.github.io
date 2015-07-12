@@ -7,7 +7,6 @@
  * Website: http://themes.3rdwavemedia.com/
 */
 /* ======= Base ======= */
-
 body {
     font-family: 'Lato', arial, sans-serif;
     color: #434343;
@@ -784,16 +783,6 @@ a.btn {
     }
     .project-image {
         margin-bottom: 15px;
-    }
-}
-@media (max-width: 767px) {
-    body {
-        padding-top: 540px;
-    }
-}
-@media (max-width: 375px) {
-    body {
-        padding-top: 600px;
     }
 }
 /* Small devices (tablets, 768px and up) */

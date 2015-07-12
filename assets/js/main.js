@@ -110,9 +110,10 @@ jQuery(document).ready(function($) {
     });
     $(".gha-feed").niceScroll({
         cursorcolor:"#6d95a0",
-        cursoropacitymin: 0.5,
-        cursoropacitymax: 1,
-        cursorwidth: "8px",
+        cursorborder: "1px solid #6d95a0",
+        cursoropacitymin: 0.3,
+        cursoropacitymax: 0.9,
+        cursorwidth: "7px",
         cursorborderradius: "0px",
         railoffset: {left: 13},
         scrollspeed: 90,
