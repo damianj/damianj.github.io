@@ -319,7 +319,9 @@ a.btn {
     -o-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 .header .btn {
+	box-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.30);
     font-weight: bold;
+    margin-top: 75px;
 }
 .header .profile-image {
     margin-right: 30px;
@@ -746,24 +748,40 @@ a.btn {
 
 @media (max-width: 1100px) {
     body {
-        padding-top: 510px;
+        padding-top: 325px !important;
     }
     .header {
         text-align: center;
-        height: 520px;
-        min-height: 130px;
+        height: 325px;
     }
+    header.header.shrink {
+        min-height: 250px;
+    }
+    .header .profile-content .name {
+	    display: none;
+	}
+	.header .profile-content .desc {
+	    display: none;
+	}
+    .header .profile-content .social {
+    padding-top: 10px;
+}
+
     .header .profile-image {
         float: none !important;
         margin: 0 auto;
     }
+    img.profile-image.shrink {
+    width: 100px;
+    height: 100px;
+}
     .header .profile-content {
         float: none !important;
         text-align: center;
     }
     .header .btn {
-        margin-top: 0px;
         float: none !important;
+        margin-top: 0px;
     }
     .project-image {
         margin-bottom: 15px;
@@ -773,16 +791,10 @@ a.btn {
     body {
         padding-top: 540px;
     }
-    .header {
-        height: 540px;
-    }
 }
 @media (max-width: 375px) {
     body {
         padding-top: 600px;
-    }
-    .header {
-        height: 600px;
     }
 }
 /* Small devices (tablets, 768px and up) */
