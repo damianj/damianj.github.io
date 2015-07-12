@@ -131,14 +131,10 @@ jQuery(document).ready(function($) {
 });
 
 function isIEorNot() {
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-    if (msie > 0) {
+    if (window.navigator.userAgent.search("MSIE") >= 0 || !!navigator.userAgent.match(/Trident\/7\./)) {
         return 1100;
     };
-    else {
-        return 1083;
-    };
+    return 1083;
 };
 
 var enableHeaderText = new toogleBool();
