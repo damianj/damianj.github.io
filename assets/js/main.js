@@ -28,6 +28,7 @@ toogleBool.prototype.next = function(e) {
     return this.value;
 };
 
+
 jQuery(document).ready(function($) {
     email = "wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
     document.getElementById('contact').action = 'http://formspree.io/' + email;
@@ -108,6 +109,14 @@ jQuery(document).ready(function($) {
             $(".gha-feed").getNiceScroll().resize();
         };
     });
+    $('.level-bar-inner').hover(
+        function(e) {
+            $($($(e.target).parent().siblings()[0]).children()[0]).tooltip('show');
+        },
+        function(e) {
+            $($($(e.target).parent().siblings()[0]).children()[0]).tooltip('hide');
+        }
+    );
     $(".gha-feed").niceScroll({
         cursorcolor:"#6d95a0",
         cursorborder: "1px solid #6d95a0",

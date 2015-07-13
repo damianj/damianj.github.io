@@ -600,8 +600,16 @@ a.btn {
 }
 .skills .skillset .level-bar-inner {
     height: 15px;
-    background: #54ba4e;
-    box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.15);
+    background: #6d95a0;
+    -webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -moz-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -ms-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -o-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+}
+.skills .skillset .level-bar-inner:hover {
+    height: 15px;
+    background: #AED8BB;
 }
 /* Testimonials section */
 
