@@ -1,9 +1,3 @@
-function mailto_email() {
-    window.location.href = "znvygb:wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {
-        return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-    });
-};
-
 function Tracker() {
     this.value = 0;
 };
@@ -111,12 +105,17 @@ jQuery(document).ready(function($) {
     });
     $('.level-bar-inner').hover(
         function(e) {
-            $($($(e.target).parent().siblings()[0]).children()[0]).tooltip('show');
+            $(e.target).parents('.item').find('.level-label').tooltip('show');
         },
         function(e) {
-            $($($(e.target).parent().siblings()[0]).children()[0]).tooltip('hide');
+            $(e.target).parents('.item').find('.level-label').tooltip('hide');
         }
     );
+    $('a.mailto').click(function(){
+        window.location.href = "znvygb:wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {
+            return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+        });
+    });
     $(".gha-feed").niceScroll({
         cursorcolor:"#6d95a0",
         cursorborder: "1px solid #6d95a0",
