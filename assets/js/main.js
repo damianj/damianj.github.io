@@ -23,19 +23,17 @@ toogleBool.prototype.next = function(e) {
 };
 
 
-jQuery(document).ready(function($) {
+$(document).ready(function() {
     email = "wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
     document.getElementById('contact').action = 'http://formspree.io/' + email;
     /*======= Skillset *=======*/
     $('.level-bar-inner').css('width', '0');
-    $(window).on('load', function() {
-        $('.level-bar-inner').each(function() {
-            var itemWidth = $(this).data('level');
-            $(this).animate({
-                width: itemWidth
-            }, 800);
-        });
 
+    $('.level-bar-inner').each(function() {
+        var itemWidth = $(this).data('level');
+        $(this).animate({
+            width: itemWidth
+        }, 800);
     });
     /* Bootstrap Tooltip for Skillset */
     $('.level-label').tooltip();
@@ -77,7 +75,6 @@ jQuery(document).ready(function($) {
         } else {
             if (validateEmail(email)) {
                 $('.contactform').delay(50).fadeOut(500);
-                $(".gha-feed").getNiceScroll().resize();
             } else {
                 e.preventDefault();
                 alert('Invalid Email Address');
@@ -93,14 +90,12 @@ jQuery(document).ready(function($) {
         }
     });
     $(".popup-contact").click(function() {
-        $('.contactform').find('form')[0].reset();
+        $('.form.contact-me')[0].reset();
         $('.contactform').delay(50).fadeIn(500);
-        $(".gha-feed").getNiceScroll().resize();
     });
     $("#contact #cancel, .contactform").click(function(e) {
         if(!$(e.target).is('form, input, label, div, span, textarea, text') || $(e.target).is('#cancel')) {
             $('.contactform').delay(50).fadeOut(500);
-            $(".gha-feed").getNiceScroll().resize();
         };
     });
     $('.level-bar-inner').hover(
@@ -111,21 +106,10 @@ jQuery(document).ready(function($) {
             $(e.target).parents('.item').find('.level-label').tooltip('hide');
         }
     );
-    $('a.mailto').click(function(){
+    $('a.mailto').click(function() {
         window.location.href = "znvygb:wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {
             return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
         });
-    });
-    $(".gha-feed").niceScroll({
-        cursorcolor:"#6d95a0",
-        cursorborder: "1px solid #6d95a0",
-        cursoropacitymin: 0.3,
-        cursoropacitymax: 0.9,
-        cursorwidth: "7px",
-        cursorborderradius: "0px",
-        railoffset: {left: 13},
-        scrollspeed: 90,
-        mousescrollstep: 70,
     });
 });
 
@@ -141,13 +125,6 @@ var targetwidth = new Tracker();
 targetwidth.next(isIEorNot());
 
 $(window).resize(function() {
-    $(".gha-feed").getNiceScroll().resize();
-    if ($(document).width() <= targetwidth.next(null) && enableHeaderText.next(null)) {
-        $('a.popup-contact').stop(true, true).animate({
-            marginTop: '5px',
-        }, 0);
-        enableHeaderText.next(false);
-    };
     if ($(document).width() > targetwidth.next(null) && $(document).scrollTop() == 0  &&!enableHeaderText.next(null)) {
         $('a.popup-contact').stop(true, true).animate({
             marginTop: '75px',
