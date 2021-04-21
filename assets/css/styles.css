@@ -761,7 +761,6 @@ a.btn {
 .footer .fa-heart {
     color: #fb866a;
 }
-/* Extra small devices (phones, less than 768px) */
 
 @media (max-width: 1100px) {
     body {
@@ -771,8 +770,8 @@ a.btn {
         text-align: center;
         height: 325px;
     }
-    header.header.shrink {
-        min-height: 250px;
+    img.profile-image.shrink {
+        margin-top: -20px;
     }
     .header .profile-content .name {
         display: none;
@@ -781,15 +780,7 @@ a.btn {
         display: none;
     }
     .header .profile-content .social {
-        padding-top: 10px;
-    }
-    .header .profile-image {
-        float: none !important;
-        margin: 0 auto;
-    }
-    img.profile-image.shrink {
-        width: 100px;
-        height: 100px;
+        padding-top: 5px;
     }
     .header .profile-content {
         float: none !important;
@@ -801,6 +792,9 @@ a.btn {
     }
     .project-image {
         margin-bottom: 15px;
+    }
+    .sections-wrapper { 
+        padding-top: 30px;
     }
 }
 /* Small devices (tablets, 768px and up) */

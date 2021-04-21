@@ -102,12 +102,15 @@ function isIEorNot() {
 
 let enableHeaderText = new toogleBool();
 let targetwidth = new Tracker();
+let trackPageTop = new Tracker();
 targetwidth.next(isIEorNot());
 
 $(window).resize(function() {
+    let sections_wrapper = $('div.container.sections-wrapper');
+
     if ($(document).width() > targetwidth.next(null) && $(document).scrollTop() == 0  &&!enableHeaderText.next(null)) {
         $('a.popup-contact').stop(true, true).animate({
-            marginTop: '-20px',
+            marginTop: $(document).width() > 1100 ? "-20px" : "-5px",
         }, 0);
         enableHeaderText.next(true);
     };
@@ -117,9 +120,16 @@ $(window).resize(function() {
         }, 0);
         enableHeaderText.next(true);
     }
+    if ($(document).scrollTop() > 0) {
+        sections_wrapper.css("padding-top", $(document).width() > 1100 ? "175px" : "0px");
+        sections_wrapper.css("margin-top", $(document).width() > 1100 ? "0" : "-160px");
+    }
+    else if ($(document).scrollTop() == 0) {
+        sections_wrapper.css( "padding-top", $(document).width() > 1100 ? "260px" : "30px" );
+        sections_wrapper.css("margin-top", "0");
+    }
 });
 
-let trackPageTop = new Tracker();
 $(window).scroll(function() {
     let sections_wrapper = $('div.container.sections-wrapper');
 
@@ -130,7 +140,7 @@ $(window).scroll(function() {
             borderRadius: '100%',
         }, 60);
         $('div.profile-content').stop(true, true).animate({
-            marginLeft: '-370px',
+            marginLeft: $(document).width() > 768 ? '-370px' : "0px",
         }, 60);
         $('a.popup-contact').stop(true, true).animate({
             marginTop: '-20px',
@@ -139,7 +149,8 @@ $(window).scroll(function() {
             marginTop: '-=57px',
             opacity: '0',
         }, 130);
-        sections_wrapper.css( "padding-top", "175px" );
+        sections_wrapper.css( "padding-top", $(document).width() > 1100 ? "175px" : "0px" );
+        sections_wrapper.css("margin-top", $(document).width() > 1100 ? "0" : "-160px");
     }
     else if ($(document).scrollTop() == 0 && trackPageTop.next(null) > 0) {
         $('header').removeClass('shrink');
@@ -159,7 +170,8 @@ $(window).scroll(function() {
             marginTop: '+=57px',
             opacity: '100',
         }, 300);
-        sections_wrapper.css( "padding-top", "260px" );
+        sections_wrapper.css( "padding-top", $(document).width() > 1100 ? "260px" : "30px" );
+        sections_wrapper.css("margin-top", "0");
     }
     trackPageTop.next($(document).scrollTop());
 });
