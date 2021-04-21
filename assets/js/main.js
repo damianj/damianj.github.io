@@ -30,45 +30,25 @@ $(document).ready(function() {
     $('.level-bar-inner').css('width', '0');
 
     $('.level-bar-inner').each(function() {
-        var itemWidth = $(this).data('level');
+        let itemWidth = $(this).data('level');
         $(this).animate({
             width: itemWidth
         }, 800);
     });
     /* Bootstrap Tooltip for Skillset */
     $('.level-label').tooltip();
-    /* jQuery RSS - https://github.com/sdepold/jquery-rss */
-    $("#rss-feeds").rss(
-        //Change this to your own rss feeds
-        "http://jimenezdmn.tumblr.com/rss", {
-            // how many entries do you want?
-            // default: 4
-            // valid values: any integer
-            limit: 3,
-            // the effect, which is used to let the entries appear
-            // default: 'show'
-            // valid values: 'show', 'slide', 'slideFast', 'slideSynced', 'slideFastSynced'
-            effect: 'slideFastSynced',
-            // outer template for the html transformation
-            // default: "<ul>{entries}</ul>"
-            // valid values: any string
-            layoutTemplate: "<div class='item'>{entries}</div>",
-            // inner template for each entry
-            // default: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>'
-            // valid values: any string
-            entryTemplate: '<h3 class="title"><a href="{url}" target="_blank">{title}</a></h3><div><p>{shortBodyPlain}</p><a class="more-link" href="{url}" target="_blank"><i class="fa fa-external-link"></i>Read more</a></div>'
-        }
-    );
+
     /* Github Activity Feed */
     GitHubActivity.feed({
         username: "damianj",
         selector: "#ghfeed"
     });
+    
     /* Contact form */
     $("#send").click(function(e) {
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var message = $("#msg").val();
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let message = $("#msg").val();
         if (name == "" || email == "" || message == "") {
             e.preventDefault();
             alert("Please Fill All Fields");
@@ -80,7 +60,7 @@ $(document).ready(function() {
                 alert('Invalid Email Address');
             }
             function validateEmail(email) {
-                var filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+                let filter = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
                 if (filter.test(email)) {
                     return true;
                 } else {
@@ -120,8 +100,8 @@ function isIEorNot() {
     return 1083;
 };
 
-var enableHeaderText = new toogleBool();
-var targetwidth = new Tracker();
+let enableHeaderText = new toogleBool();
+let targetwidth = new Tracker();
 targetwidth.next(isIEorNot());
 
 $(window).resize(function() {
@@ -139,33 +119,35 @@ $(window).resize(function() {
     }
 });
 
-var trackPageTop = new Tracker();
+let trackPageTop = new Tracker();
 $(window).scroll(function() {
+    let sections_wrapper = $('div.container.sections-wrapper');
+
     if ($(document).scrollTop() > 0 && trackPageTop.next(null) == 0) {
         $('header').addClass('shrink');
         $('img.profile-image').addClass('shrink');
         $('a.popup-contact').stop(true, true).animate({
-            marginTop: '5px',
+            marginTop: '-20px',
         }, 60);
         $('h1.name, h2.desc').stop(true, true).animate({
             marginTop: '-=57px',
             opacity: '0',
         }, 130);
-        $('body').css( "padding-top", "175px" );
+        sections_wrapper.css( "padding-top", "175px" );
     }
     else if ($(document).scrollTop() == 0 && trackPageTop.next(null) > 0) {
         $('header').removeClass('shrink');
         $('img.profile-image').removeClass('shrink');
         if($(document).width() > targetwidth.next(null)) {
-        $('a.popup-contact').stop(true, true).animate({
-            marginTop: '75px',
-        }, 100);
+            $('a.popup-contact').stop(true, true).animate({
+                marginTop: '0px',
+            }, 100);
         }
         $('h1.name, h2.desc').stop(true, true).animate({
             marginTop: '+=57px',
             opacity: '100',
         }, 300);
-        $('body').css( "padding-top", "230px" );
+        sections_wrapper.css( "padding-top", "260px" );
     }
     trackPageTop.next($(document).scrollTop());
 });

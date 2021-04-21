@@ -10,9 +10,8 @@
 body {
     font-family: 'Lato', arial, sans-serif;
     color: #434343;
-    background: #dedede url('http://s5.postimg.org/atuvjpcef/background.png') top left fixed repeat;
+    background: radial-gradient(#ddd, #fff);;
     font-size: 16px;
-    padding-top: 230px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -28,7 +27,7 @@ h6 {
 }
 h2 {
     padding-bottom: 10px;
-    border-bottom: 1px dotted #6d95a0;
+    border-bottom: 1px dotted #4DB6AC;
 }
 @keyframes shake {
     0% {
@@ -51,7 +50,7 @@ h2 {
     }
 }
 a {
-    color: #3aaa64;
+    color: #D81B60;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
@@ -80,8 +79,8 @@ a.btn:focus {
 }
 a.btn-cta-primary,
 .btn-cta-primary {
-    background: #6D95A0;
-    border: 1px solid #6D95A0;
+    background: #4DB6AC;
+    border: 1px solid #4DB6AC;
     color: #fff;
     font-weight: 600;
     text-transform: uppercase;
@@ -141,7 +140,7 @@ form .field label {
     position: absolute;
     top: 0;
     left: 0;
-    background: #313A3D;
+    background: #1e1e1e;
     max-height: 100%;
     width: 100%;
     padding: 18px 18px;
@@ -177,7 +176,7 @@ form .field textarea {
     margin: 0;
     padding: 18px 0;
     padding-left: 19.5%;
-    color: #313A3D;
+    color: #1e1e1e;
     font-size: 1.4em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -216,7 +215,7 @@ form .field textarea:focus + label,
 form .field textarea.focused + label {
     width: 18%;
     background: #AED8BB;
-    color: #313A3D;
+    color: #1e1e1e;
 }
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
@@ -224,7 +223,7 @@ form .field textarea.focused + label {
 }
 form .field:hover label {
     width: 18%;
-    background: #313A3D;
+    background: #1e1e1e;
     color: white;
 }
 form input[type="submit"],
@@ -249,7 +248,7 @@ input[type="button"] {
 }
 form input[type="submit"]:hover,
 input[type="button"]:hover {
-    background: #313A3D;
+    background: #1e1e1e;
     color: #AED8BB;
 }
 form input[type="submit"]:focus,
@@ -297,15 +296,18 @@ header {
 .header {
     height: 230px;
     padding: 10px 0 10px 0;
-    background: #313A3D;
-    border-top: 10px solid #6d95a0;
-    border-bottom: 1px dotted #6d95a0;
+    background: #1e1e1e;
+    border-top: 10px solid #4DB6AC;
+    border-bottom: 1px dotted #4DB6AC;
     box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.30);
 }
 header.header.shrink {
     height: 78px;
-    background-color: rgba(49, 58, 61, 0.95);
+    background-color: #1e1e1e;
     display: inline-block;
+}
+header.header.shrink a:not(.popup-contact) {
+    margin-top: 0 !important;
 }
 img.profile-image.shrink {
     width: 50px;
@@ -321,7 +323,6 @@ a.btn {
 .header .btn {
     box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.30);
     font-weight: bold;
-    margin-top: 75px;
 }
 .header .profile-image {
     margin-right: 30px;
@@ -343,7 +344,7 @@ a.btn {
     margin-top: 30px;
 }
 .header .profile-content .desc {
-    color: #778492;
+    color: #E0F2F1;
     font-family: "Lato", arial, sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -358,11 +359,11 @@ a.btn {
     width: 46px;
     height: 46px;
     display: inline-block;
-    color: #6d95a0;
+    color: #4DB6AC;
 }
-.header .profile-content .social a .fa {
+.header .profile-content .social a svg {
     font-size: 37px;
-    color: #6d95a0;
+    color: #4DB6AC;
     margin: 0 0 0 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     vertical-align: middle;
@@ -373,7 +374,7 @@ a.btn {
     -ms-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.header .profile-content .social a .fa:hover {
+.header .profile-content .social a svg:hover {
     animation-name: shake;
     animation-duration: 375ms;
     animation-iteration-count: 1;
@@ -384,7 +385,7 @@ a.btn {
 /* ======= Sections======= */
 
 .sections-wrapper {
-    padding-top: 60px;
+    padding-top: 260px;
     padding-bottom: 60px;
 }
 .section {
@@ -395,6 +396,12 @@ a.btn {
     box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.075);
     padding: 15px 15px 45px 15px;
     height: auto;
+}
+
+.section-inner ul svg {
+    width: 20px !important;
+    margin-right: 0.5em !important;
+
 }
 .section .heading {
     margin-top: 0;
@@ -602,7 +609,7 @@ a.btn {
 }
 .skills .skillset .level-bar-inner {
     height: 15px;
-    background: #6d95a0;
+    background: #4DB6AC;
     -webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
     -moz-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
     -ms-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -712,7 +719,7 @@ a.btn {
     margin-right: 5px;
 }
 .list ul li a {
-    color: #3aaa64;
+    color: #D81B60;
 }
 .list ul li a:hover {
     color: #2d844e;
@@ -737,10 +744,10 @@ a.btn {
 /* ======= Footer ======= */
 
 .footer {
-    background: rgba(49, 58, 61, 0.95);
+    background: #1e1e1e;
     color: #fff;
     padding: 3px 0px;
-    border-top: 1px dotted #6d95a0;
+    border-top: 1px dotted #4DB6AC;
     box-shadow: -0.5px -0.5px 3px rgba(0, 0, 0, 0.3);
 }
 .footer .copyright {
