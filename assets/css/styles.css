@@ -312,7 +312,7 @@ header.header.shrink a:not(.popup-contact) {
 img.profile-image.shrink {
     width: 50px;
     height: 50px;
-    margin-top: -2px;
+    margin-top: -20px;
 }
 a.btn {
     -webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -326,7 +326,7 @@ a.btn {
 }
 .header .profile-image {
     margin-right: 30px;
-    margin-top: 12px;
+    margin-top: 0;
     height: 170px;
     width: 170px;
     -webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);

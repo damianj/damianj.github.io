@@ -126,6 +126,12 @@ $(window).scroll(function() {
     if ($(document).scrollTop() > 0 && trackPageTop.next(null) == 0) {
         $('header').addClass('shrink');
         $('img.profile-image').addClass('shrink');
+        $('img.profile-image').stop(true, true).animate({
+            borderRadius: '100%',
+        }, 60);
+        $('div.profile-content').stop(true, true).animate({
+            marginLeft: '-370px',
+        }, 60);
         $('a.popup-contact').stop(true, true).animate({
             marginTop: '-20px',
         }, 60);
@@ -138,6 +144,12 @@ $(window).scroll(function() {
     else if ($(document).scrollTop() == 0 && trackPageTop.next(null) > 0) {
         $('header').removeClass('shrink');
         $('img.profile-image').removeClass('shrink');
+        $('img.profile-image').stop(true, true).animate({
+            borderRadius: '2.5%',
+        }, 60);
+        $('div.profile-content').stop(true, true).animate({
+            marginLeft: '0px',
+        }, 60);
         if($(document).width() > targetwidth.next(null)) {
             $('a.popup-contact').stop(true, true).animate({
                 marginTop: '0px',
