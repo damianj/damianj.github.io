@@ -25,7 +25,7 @@ toogleBool.prototype.next = function(e) {
 
 $(document).ready(function() {
     email = "wvzrarm.qza@tznvy.pbz".replace(/[a-zA-Z]/g, function(c) {return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});
-    document.getElementById('contact').action = 'http://formspree.io/' + email;
+    document.getElementById('contact').action = 'https://formspree.io/' + email;
     /*======= Skillset *=======*/
     $('.level-bar-inner').css('width', '0');
 
@@ -107,13 +107,13 @@ targetwidth.next(isIEorNot());
 $(window).resize(function() {
     if ($(document).width() > targetwidth.next(null) && $(document).scrollTop() == 0  &&!enableHeaderText.next(null)) {
         $('a.popup-contact').stop(true, true).animate({
-            marginTop: '75px',
+            marginTop: '-20px',
         }, 0);
         enableHeaderText.next(true);
     };
     if ($(document).width() > targetwidth.next(null) && $(document).scrollTop() > 0 && !enableHeaderText.next(null)) {
         $('a.popup-contact').stop(true, true).animate({
-            marginTop: '5px',
+            marginTop: '0px',
         }, 0);
         enableHeaderText.next(true);
     }
