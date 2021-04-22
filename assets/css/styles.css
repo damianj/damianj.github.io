@@ -609,7 +609,7 @@ a.btn {
 }
 .skills .skillset .level-bar-inner {
     height: 15px;
-    background: #4DB6AC;
+    background: #D81B60;
     -webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
     -moz-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
     -ms-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -687,8 +687,8 @@ a.btn {
 .languages .item:last-child {
     margin-bottom: 0;
 }
-.languages .item .fa {
-    color: #49ac43;
+.languages .item svg {
+    color: #D81B60;
     text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.2);
     ;
 }
